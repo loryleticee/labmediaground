@@ -1,0 +1,11 @@
+.sound{
+  position : absolute;
+  width: 20%;
+  height: 30%;
+  right: 20%;
+  padding: 1rem ;
+  background-color: lightgrey;
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+
+}
