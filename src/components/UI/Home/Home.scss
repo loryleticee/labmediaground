@@ -13,8 +13,9 @@
   background-color: #282c34;
   display: flex;
 
-  .live{
-    align-content: space-between;
+  .item{
+    align-content: space-around;
+    margin: 2rem;
   }
 }
 

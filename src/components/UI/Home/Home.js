@@ -20,25 +20,21 @@ const Home = () => {
     return (
       <>
         <div className="page-group">
-          <div className="live">
             {
               videos.map((video, index) => {
                return (
                    <iframe
-                     title={index}
-                     key ={index}
-                     style={{
-                       position: "relative",
-                       width: "150px",
-                       height: "150px"
-                     }}
-                     src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                     frameBorder="0"
+                      title={index}
+                      key ={index}
+                      className={'item'}
+                      width= "400px"
+                      height= "400px"
+                      src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                      frameBorder="0"
                    />
                )
               })
             }
-          </div>
         </div>
       </>
     );
