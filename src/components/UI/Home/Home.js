@@ -1,22 +1,46 @@
-import React, {useState} from "react";
-import './Home.scss';
-import Flexbox from 'flexbox-react';
+import React, {useEffect, useState} from "react";
+import "./Home.scss";
+import getVideos from "../../../services/youtube/youtube";
 
-const Home = (props) => {
+const Home = () => {
+
+  const [videos, setVideos] = useState([]);
+  useEffect(() =>{
+    let u = videos;
+    getVideos().then(data => {
+      if (u.length > 0 ) {
+        //setVideos(data.items);
+      } else{console.log('MISSS');
+      u = ['',''];
+        setVideos(data.items);
+      }
+    });
+  },[videos]);
+
     return (
-      <Flexbox flexDirection="column" minHeight="100vh">
-        <Flexbox element="header" height="60px">
-          Header
-        </Flexbox>
-
-        <Flexbox flexGrow={1}>
-          Content
-        </Flexbox>
-
-        <Flexbox element="footer" height="60px">
-          Footer
-        </Flexbox>
-      </Flexbox>
+      <>
+        <div className="page-group">
+          <div className="live">
+            {
+              videos.map((video, index) => {
+               return (
+                   <iframe
+                     title={index}
+                     key ={index}
+                     style={{
+                       position: "relative",
+                       width: "150px",
+                       height: "150px"
+                     }}
+                     src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                     frameBorder="0"
+                   />
+               )
+              })
+            }
+          </div>
+        </div>
+      </>
     );
 };
 

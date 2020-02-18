@@ -7,5 +7,14 @@
   background-color: lightgrey;
   opacity: 0.3;
   filter: alpha(opacity=30); /* For IE8 and earlier */
-
 }
+
+.page-group{
+  background-color: #282c34;
+  display: flex;
+
+  .live{
+    align-content: space-between;
+  }
+}
+
