@@ -2,13 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Chat from "./components/UI/Chat/Chat";
-import Log from "./components/UI/Log/Log";
+import Home from "./components/UI/Home/Home";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {applyMiddleware, compose, createStore} from "redux";
 import {adminReducer} from "./reducers";
 import {Provider} from "react-redux";
 import ReduxThunk from "redux-thunk";
+//import {Elements, loadStripe} from '@stripe/react-stripe-js';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -17,7 +19,6 @@ import {
 } from "react-router-dom";
 //MIDDLEWARE
 const middleWare = store => next => action => {
-
     return next(action)
 };
 
@@ -27,6 +28,9 @@ export const store = createStore(adminReducer,
     )
 );
 
+//const stripePromise = loadStripe('pk_test_74aZGrFdqGsIl2hxXNsqsoYf00qg92oML8');
+//console.log("FFF", stripePromise);
+
 ReactDOM.render(
     <Provider store = {store}>
         <Router>
@@ -34,18 +38,18 @@ ReactDOM.render(
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/chat">Chat</Link>
+                            <Link to="/credits">Credits</Link>
                         </li>
                         <li>
                             <Link to="/">
-                                Login
+                                Home
                             </Link>
                         </li>
                     </ul>
                 </nav>
 
                 <Switch>
-                    <Route exact path="/" component={Log}/>
+                    <Route exact path="/" component={Home}/>
                     <Route exact path="/chat" component={Chat} />
                 </Switch>
             </div>

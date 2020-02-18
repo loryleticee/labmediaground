@@ -6,6 +6,7 @@ import styled from "styled-components";
 //import {Redirect} from "react-router-dom";
 import {IntlProvider, FormattedMessage} from "react-intl";
 import {translate} from "../../../translations";
+//import CheckoutForm from "../../../services/stripe/stripe";
 
 const locale = navigator.language;
 
@@ -19,6 +20,7 @@ const Welcome  = styled.div`
 `;
 
 const Chat = () => {
+
     return (
         <IntlProvider locale={locale} messages= {translate(locale)}>
         <DivChat className = {"card container"}>
@@ -30,6 +32,7 @@ const Chat = () => {
                 <MessageList />
                 <MessageBar />
             </form>
+            
         </DivChat>
         </IntlProvider>
     );
