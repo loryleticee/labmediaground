@@ -37,19 +37,6 @@ ReactDOM.render(
         <Router>
             <div className={'page-full'} >
                 <div className={'nav-bar'}>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to="/credits">Credits</Link>
-                            </li>
-                            <li>
-                                <Link to="/">
-                                    Home
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
-
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/chat" component={Chat} />
