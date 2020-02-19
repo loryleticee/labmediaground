@@ -25,10 +25,10 @@ const Home = () => {
                return (
                    <iframe
                       title={index}
-                      key ={index}
+                      key={index}
                       className={'item'}
-                      width= "400px"
-                      height= "400px"
+                      width="400px"
+                      height="400px"
                       src={`https://www.youtube.com/embed/${video.id.videoId}`}
                       frameBorder="0"
                    />

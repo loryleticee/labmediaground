@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./components/UI/Home/Home.scss";
 import Chat from "./components/UI/Chat/Chat";
 import Home from "./components/UI/Home/Home";
 import * as serviceWorker from "./serviceWorker";
@@ -34,24 +35,26 @@ export const store = createStore(adminReducer,
 ReactDOM.render(
     <Provider store = {store}>
         <Router>
-            <div className={'nav-bar'}>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/credits">Credits</Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                Home
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
+            <div className={'page-full'} >
+                <div className={'nav-bar'}>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to="/credits">Credits</Link>
+                            </li>
+                            <li>
+                                <Link to="/">
+                                    Home
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
 
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/chat" component={Chat} />
-                </Switch>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/chat" component={Chat} />
+                    </Switch>
+                </div>
             </div>
         </Router>
     </Provider>
