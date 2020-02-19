@@ -6,12 +6,11 @@ const Home = () => {
 
   const [videos, setVideos] = useState([]);
   useEffect(() =>{
-    let u = videos;
+    let vdz = videos;
     getVideos().then(data => {
-      if (u.length > 0 ) {
-        //setVideos(data.items);
-      } else{console.log('MISSS');
-      u = ['',''];
+      if (vdz.length > 0 ) {
+      } else{
+      vdz = ['',''];
         setVideos(data.items);
       }
     });
