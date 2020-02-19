@@ -6,7 +6,6 @@
 }
 
 .page-group{
-  background-color: #E1E1E1;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -14,10 +13,10 @@
   border-radius: 3px;
   width: 33rem;
   height: 50rem;
+  padding: 1rem;
 
   .item{
     align-content: space-evenly;
-    margin: 4rem;
   }
 }
 
