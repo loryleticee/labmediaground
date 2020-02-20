@@ -26,7 +26,6 @@ const Home = () => {
                    <img
                      title={index}
                      key={index}
-                     className={'item'}
                      width="130rem"
                      height="100rem"
                      src={video.snippet.thumbnails.default.url}

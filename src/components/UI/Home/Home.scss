@@ -1,9 +1,8 @@
 .page-full{
-  padding: 5rem;
   //background-size: 2550px 1700px;
-  background: url("../../../images/ayrlomusic-background.jpg") no-repeat;
+  background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
   background-size: cover;
-  height: 55rem;
+  height: 100vh;
 }
 
 .page-group{
@@ -24,23 +23,29 @@
 @media (min-width: 768px){
   .page-full{
     background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
-    padding: 5rem;
+    height: 100vh;
     background-size: cover;
-    height: 55rem;
+    background-position-x: center;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 4rem;
   }
 
   .page-group{
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
     overflow: auto;
     width: 12%;
     height: 50rem;
-    right: 4rem;
+    margin-left: auto;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
 
-    .item{
+    img{
       align-content: space-between;
-      margin: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
   }
 }
