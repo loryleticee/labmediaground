@@ -32,11 +32,11 @@
   .page-group{
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    position: absolute;
     overflow: auto;
     width: 12%;
     height: 50rem;
-    left: 728px;
+    right: 2rem;
 
     .item{
       align-content: space-between;
