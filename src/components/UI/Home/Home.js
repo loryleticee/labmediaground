@@ -10,7 +10,7 @@ const Home = () => {
       if (vdz.length > 0 ) {
       } else{
       vdz = ['',''];
-      console.log('SUCCES', data.items)
+
         setVideos(data.items);
       }
     });

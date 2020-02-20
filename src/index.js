@@ -12,18 +12,14 @@ import {
     Route,
 } from "react-router-dom";
 
-
 ReactDOM.render(
-
-        <Router>
-            <div className={'page-full'} >
-                <div className={'nav-bar'}>
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                    </Switch>
-                </div>
-            </div>
-        </Router>
+  <Router>
+      <div className={'page-full'} >
+          <Switch>
+              <Route exact path="/" component={Home}/>
+          </Switch>
+      </div>
+  </Router>
     , document.getElementById("root")
 );
 

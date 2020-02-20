@@ -3,10 +3,23 @@
   background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
-}
+  display: flex;
+  .page-group{
+    //display: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 8rem;
+    //margin-: 12rem;
+    overflow: auto;
 
-.page-group{
-  display: none;
+    img{
+      align-content: space-between;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 2px solid #E1E1E1;
+    }
+  }
 }
 
 .sound{
@@ -30,11 +43,12 @@
     justify-content: right;
     align-items: center;
     padding-right: 4rem;
-  }
+
 
   .page-group{
     display: flex;
     flex-wrap: wrap;
+    flex-direction : row;
     overflow: auto;
     width: 16%;
     height: 50rem;
@@ -48,6 +62,7 @@
       margin-bottom: 1rem;
       border: 2px solid #E1E1E1;
     }
+  }
   }
 }
 
