@@ -26,8 +26,8 @@ const Home = () => {
                       title={index}
                       key={index}
                       className={'item'}
-                      width="400px"
-                      height="400px"
+                      width="100px"
+                      height="100px"
                       src={`https://www.youtube.com/embed/${video.id.videoId}`}
                       frameBorder="0"
                    />

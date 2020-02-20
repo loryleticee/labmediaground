@@ -10,11 +10,6 @@
   display: none;
 }
 
-.title-group{
-  position: absolute;
-  left: 20%;
-}
-
 .sound{
   position : absolute;
   width: 20%;
@@ -27,15 +22,21 @@
 }
 
 @media (min-width: 768px){
+  .page-full{
+    background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
+    padding: 5rem;
+    background-size: cover;
+    height: 55rem;
+  }
+
   .page-group{
     display: flex;
     flex-wrap: wrap;
     position: relative;
     overflow: auto;
-    border-radius: 3px;
-    width: 30%;
+    width: 12%;
     height: 50rem;
-    padding: 3rem;
+    left: 728px;
 
     .item{
       align-content: space-between;
