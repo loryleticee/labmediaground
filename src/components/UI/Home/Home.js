@@ -10,6 +10,7 @@ const Home = () => {
       if (vdz.length > 0 ) {
       } else{
       vdz = ['',''];
+      console.log('SUCCES', data.items)
         setVideos(data.items);
       }
     });
@@ -21,15 +22,17 @@ const Home = () => {
             {
               videos.map((video, index) => {
                return (
-                   <iframe
-                      title={index}
-                      key={index}
-                      className={'item'}
-                      width="100px"
-                      height="100px"
-                      src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                      frameBorder="0"
+                 <a target={"_blank"} key={index} href={`https://www.youtube.com/embed/${video.id.videoId}`}>
+                   <img
+                     title={index}
+                     key={index}
+                     className={'item'}
+                     width="130rem"
+                     height="100rem"
+                     src={video.snippet.thumbnails.default.url}
                    />
+                 </a>
+
                )
               })
             }
