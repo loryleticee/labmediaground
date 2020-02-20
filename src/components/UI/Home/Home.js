@@ -11,25 +11,37 @@ const Home = () => {
       } else{
       vdz = ['',''];
 
+        if(data.error.errors){
+          setVideos([{
+          0:{
+            id : {
+              videoId: "Kxwwv6swXQk"
+            }
+          },
+          1:{id : {
+              videoId: "Kxwwv6swXQk"
+            }
+          }}]);
+          return;
+        }
         setVideos(data.items);
       }
     });
   },[videos]);
 
+  console.log('SUCCES',videos)
     return (
       <>
         <div className="page-group">
             {
               videos.map((video, index) => {
                return (
-                 <a target={"_blank"} key={index} href={`https://www.youtube.com/embed/${video.id.videoId}`}>
-                   <iframe
-                     title={index}
-                     key={index}
-                     src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                     frameBorder="0"
-                   />
-                 </a>
+                 <iframe
+                   title={index}
+                   key ={index}
+                   src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                   frameBorder="0"
+                 />
                )
               })
             }
