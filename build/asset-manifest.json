@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.034afe13.chunk.css",
-    "main.js": "/static/js/main.70c7de20.chunk.js",
-    "main.js.map": "/static/js/main.70c7de20.chunk.js.map",
+    "main.css": "/static/css/main.1065ff17.chunk.css",
+    "main.js": "/static/js/main.5e147517.chunk.js",
+    "main.js.map": "/static/js/main.5e147517.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b27efa0.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b27efa0.js.map",
     "static/css/2.47e06e2e.chunk.css": "/static/css/2.47e06e2e.chunk.css",
     "static/js/2.03634d22.chunk.js": "/static/js/2.03634d22.chunk.js",
     "static/js/2.03634d22.chunk.js.map": "/static/js/2.03634d22.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c275e35f8a48120bdd33f2591e5eb957.js": "/precache-manifest.c275e35f8a48120bdd33f2591e5eb957.js",
+    "precache-manifest.6d7da0931eab4eb2869c4f1f236380cb.js": "/precache-manifest.6d7da0931eab4eb2869c4f1f236380cb.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.034afe13.chunk.css.map": "/static/css/main.034afe13.chunk.css.map",
+    "static/css/main.1065ff17.chunk.css.map": "/static/css/main.1065ff17.chunk.css.map",
     "static/js/2.03634d22.chunk.js.LICENSE": "/static/js/2.03634d22.chunk.js.LICENSE",
     "static/media/Home.scss": "/static/media/ayrlomusic-background-full.5d22630e.jpg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.2b27efa0.js",
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.03634d22.chunk.js",
-    "static/css/main.034afe13.chunk.css",
-    "static/js/main.70c7de20.chunk.js"
+    "static/css/main.1065ff17.chunk.css",
+    "static/js/main.5e147517.chunk.js"
   ]
 }

@@ -23,12 +23,11 @@ const Home = () => {
               videos.map((video, index) => {
                return (
                  <a target={"_blank"} key={index} href={`https://www.youtube.com/embed/${video.id.videoId}`}>
-                   <img
+                   <iframe
                      title={index}
                      key={index}
-                     width="130rem"
-                     height="100rem"
-                     src={video.snippet.thumbnails.default.url}
+                     src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                     frameBorder="0"
                    />
                  </a>
 
