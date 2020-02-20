@@ -9,19 +9,23 @@ const Home = () => {
     getVideos().then(data => {
       if (vdz.length > 0 ) {
       } else{
-      vdz = ['',''];
-
+        vdz = ['',''];
         if(data.error.errors){
-          setVideos([{
-          0:{
-            id : {
-              videoId: "Kxwwv6swXQk"
-            }
-          },
-          1:{id : {
-              videoId: "Kxwwv6swXQk"
-            }
-          }}]);
+          setVideos(
+            [
+                    {
+                      id :
+                        {
+                          videoId: "Kxwwv6swXQk"
+                        }
+                    },
+                    {
+                      id : {
+                          videoId: "Kxwwv6swXQk"
+                        }
+                    }
+                  ]
+          );
           return;
         }
         setVideos(data.items);
