@@ -30,7 +30,6 @@ const Home = () => {
                      frameBorder="0"
                    />
                  </a>
-
                )
               })
             }
