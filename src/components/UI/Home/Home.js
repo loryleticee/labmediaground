@@ -3,7 +3,6 @@ import "./Home.scss";
 import getVideos from "../../../services/youtube/youtube";
 
 const Home = () => {
-
   const [videos, setVideos] = useState([]);
   useEffect(() =>{
     let vdz = videos;
