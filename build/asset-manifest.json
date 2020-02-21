@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.09c4984b.chunk.css",
+    "main.css": "/static/css/main.8fe3bb72.chunk.css",
     "main.js": "/static/js/main.18474cb9.chunk.js",
     "main.js.map": "/static/js/main.18474cb9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b27efa0.js",
@@ -9,18 +9,18 @@
     "static/js/2.03634d22.chunk.js": "/static/js/2.03634d22.chunk.js",
     "static/js/2.03634d22.chunk.js.map": "/static/js/2.03634d22.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b4bb0313841db191568791f93c4177c2.js": "/precache-manifest.b4bb0313841db191568791f93c4177c2.js",
+    "precache-manifest.4d211fb43025c7e5e65cee9249ba51d3.js": "/precache-manifest.4d211fb43025c7e5e65cee9249ba51d3.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.09c4984b.chunk.css.map": "/static/css/main.09c4984b.chunk.css.map",
+    "static/css/main.8fe3bb72.chunk.css.map": "/static/css/main.8fe3bb72.chunk.css.map",
     "static/js/2.03634d22.chunk.js.LICENSE": "/static/js/2.03634d22.chunk.js.LICENSE",
-    "static/media/Home.scss": "/static/media/ayrlomusic-background-full.35500919.jpg"
+    "static/media/Home.scss": "/static/media/ayrlomusic-background-full.8c6dfa94.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2b27efa0.js",
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.03634d22.chunk.js",
-    "static/css/main.09c4984b.chunk.css",
+    "static/css/main.8fe3bb72.chunk.css",
     "static/js/main.18474cb9.chunk.js"
   ]
 }
