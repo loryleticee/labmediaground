@@ -4,6 +4,14 @@ import getVideos from "../../../services/youtube/youtube";
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
+  const init = [
+    {
+      id :
+        {
+          videoId: "Kxwwv6swXQk"
+        }
+    },
+  ];
   useEffect(() =>{
     let vdz = videos;
     getVideos().then(data => {
@@ -12,19 +20,7 @@ const Home = () => {
         vdz = ['',''];
         if(data.error.errors){
           setVideos(
-            [
-                    {
-                      id :
-                        {
-                          videoId: "Kxwwv6swXQk"
-                        }
-                    },
-                    {
-                      id : {
-                          videoId: "Kxwwv6swXQk"
-                        }
-                    }
-                  ]
+            init
           );
           return;
         }
