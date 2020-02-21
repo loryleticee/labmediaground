@@ -16,12 +16,10 @@ import {
 ReactDOM.render(
 
         <Router>
-            <div className={'page-full'} >
-                <div className={'nav-bar'}>
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                    </Switch>
-                </div>
+            <div className={'d-flex flex-column page-full'} >
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                </Switch>
             </div>
         </Router>
     , document.getElementById("root")

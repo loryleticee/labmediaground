@@ -17,26 +17,22 @@ const Home = () => {
   },[videos]);
 
     return (
-      <>
-        <div className="page-group">
+        <div className="d-flex flex-column ml-auto mr-5 my-5 align-content-center flex-wrap overflow-auto">
             {
               videos.map((video, index) => {
-               return (
-                 <a target={"_blank"} key={index} href={`https://www.youtube.com/embed/${video.id.videoId}`}>
-                   <img
-                     title={index}
-                     key={index}
-                     width="130rem"
-                     height="100rem"
-                     src={video.snippet.thumbnails.default.url}
-                   />
-                 </a>
-
-               )
+              return (
+                <a target={"_blank"} key={index} href={`https://www.youtube.com/embed/${video.id.videoId}`} className="w-100 my-3">
+                  <img
+                    title={index}
+                    key={index}
+                    className="flex-wrap w-100"
+                    src={video.snippet.thumbnails.default.url}
+                  />
+                </a>
+                )
               })
             }
         </div>
-      </>
     );
 };
 
