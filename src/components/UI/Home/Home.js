@@ -18,7 +18,7 @@ const Home = () => {
       if (vdz.length > 0 ) {
       } else{
         vdz = ['',''];
-        console.log('SUCCES', data);
+
         if(data['error'] !== undefined){
           setVideos(
             init
@@ -30,7 +30,6 @@ const Home = () => {
     });
   },[videos]);
 
-  console.log('SUCCES',videos)
     return (
       <>
         <div className="page-group">
