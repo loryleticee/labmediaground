@@ -44,7 +44,9 @@ const Home = () => {
 
     return (
       <>
+
         <div className="page-group">
+          <div className={"youtube-canvas"}>
             {
               videos.map((video, index) => {
                return (
@@ -57,6 +59,7 @@ const Home = () => {
                )
               })
             }
+          </div>
         </div>
       </>
     );

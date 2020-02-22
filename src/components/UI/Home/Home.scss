@@ -1,14 +1,17 @@
 .page-full{
-  background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
+  background: url("../../../images/ayrlomusic-background-full.svg") no-repeat;
   background-size: cover;
   height: 100vh;
   display: flex;
 
+  .youtube-canvas{
+    margin: 2rem;
+    display: flex;
+  }
   .page-group{
     //display: none;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     margin-top: auto;
     margin-left: 1rem;
     overflow: auto;
