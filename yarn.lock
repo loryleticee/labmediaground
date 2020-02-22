@@ -1182,18 +1182,6 @@
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
   integrity sha512-vTCdPp/T/Q3oSqwHmZ5Kpa9oI7iLtGl3RQaA/NyLHikvcrPxACkkKVr/XzkSPJWXHRhKGzVvb0urJsbMlRxi1Q==
 
-"@stripe/react-stripe-js@^1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@stripe/react-stripe-js/-/react-stripe-js-1.0.0-beta.5.tgz#5bc6d3c285d6b543f699b0e015525f2ff20cacec"
-  integrity sha512-CEZD4BbmcUzvNorVFpO5v0fL9C9eDRm0Jj9RJuONS0nhjfQwfBA+jNQ4WTZkE/LCAoLfED78AEa+FwUPFnb5cg==
-  dependencies:
-    prop-types "^15.7.2"
-
-"@stripe/stripe-js@^1.0.0-beta.6":
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.0.0-beta.6.tgz#b9b6fd6b81ca8928c10d1cce865d1dbc0d2a1124"
-  integrity sha512-P7w2Qg8d9C671m1D9Anp6FkHDXecASAk+PzRH30YgrUFBGbZVBo3orDNRDst3hcjCJ87GjLFb65qIB89/AkF8g==
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"

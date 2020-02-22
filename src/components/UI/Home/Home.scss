@@ -1,24 +1,31 @@
 .page-full{
-  //background-size: 2550px 1700px;
   background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
+  display: flex;
+
+  .page-group{
+    //display: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: auto;
+    margin-left: 1rem;
+    overflow: auto;
+    height: 38rem;
+
+    iframe{
+      align-content: space-between;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 3px solid #E1E1E1;
+      border-radius: 6px 6px 6px 6px;
+      width:13rem;
+      height:10rem;
+    }
+  }
 }
 
-.page-group{
-  display: none;
-}
-
-.sound{
-  position : absolute;
-  width: 20%;
-  height: 30%;
-  right: 20%;
-  padding: 1rem ;
-  background-color: lightgrey;
-  opacity: 0.3;
-  filter: alpha(opacity=30); /* For IE8 and earlier */
-}
 
 @media (min-width: 768px){
   .page-full{
@@ -30,23 +37,25 @@
     justify-content: right;
     align-items: center;
     padding-right: 4rem;
-  }
 
-  .page-group{
-    display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
-    width: 16%;
-    height: 50rem;
-    margin-left: auto;
-    padding-right: 0.8rem;
-    padding-left: 0.8rem;
+    .page-group{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      overflow: auto;
+      width: 41rem;
+      height: 27rem;
+      margin: auto 0 1rem auto;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 0.1rem;
 
-    img{
-      align-content: space-between;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      border: 2px solid #E1E1E1;
+      iframe{
+        width: 39rem;
+        height: 42rem;
+        align-content: space-around;
+        margin: 1rem auto;
+        border: 2px solid #E1E1E1;
+      }
     }
   }
 }
