@@ -7,8 +7,9 @@
   .youtube-canvas{
     margin: 2rem;
     display: flex;
-    width: 12rem;
+    width: 15rem;
   }
+
   .page-group{
     //display: none;
     display: flex;
@@ -24,8 +25,8 @@
       margin-bottom: 1rem;
       border: 3px solid #E1E1E1;
       border-radius: 6px 6px 6px 6px;
-      width:13rem;
-      height:10rem;
+      width:15rem;
+      height:15rem;
     }
   }
 }
@@ -42,20 +43,26 @@
     align-items: center;
     padding-right: 4rem;
 
+    .youtube-canvas{
+      margin: 0.8rem;
+      display: flex;
+      width: 15rem;
+      margin-left: auto;
+      flex-direction: column;
+    }
+
     .page-group{
       display: flex;
       flex-wrap: wrap;
       flex-direction: column-reverse;
       overflow: auto;
-      height: 20rem;
-      width: 25rem;
+      height: 47rem;
+      width: 45rem;
       margin: auto 0 1rem auto;
-      background-color: rgba(255, 255, 255, 0.4);
-      padding: 0.1rem;
 
       iframe{
-        width: 39rem;
-        height: 42rem;
+        width: 15rem;
+        height: 15rem;
         align-content: space-around;
         margin: 1rem auto;
         border: 2px solid #E1E1E1;
