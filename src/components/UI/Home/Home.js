@@ -18,7 +18,8 @@ const Home = () => {
       if (vdz.length > 0 ) {
       } else{
         vdz = ['',''];
-        if(data.error.errors){
+        console.log('SUCCES', data);
+        if(data['error'] !== undefined){
           setVideos(
             init
           );
