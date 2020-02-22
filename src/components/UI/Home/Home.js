@@ -11,6 +11,18 @@ const Home = () => {
           videoId: "Kxwwv6swXQk"
         }
     },
+    {
+      id :
+        {
+          videoId: "hoGY5RYvT0U"
+        }
+    },
+    {
+      id :
+        {
+          videoId: "A8kPN-4YQj8"
+        }
+    },
   ];
   useEffect(() =>{
     let vdz = videos;
