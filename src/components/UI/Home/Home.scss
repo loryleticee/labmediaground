@@ -5,9 +5,8 @@
   display: flex;
 
   .youtube-canvas{
-    margin: 2rem;
     display: flex;
-    width: 15rem;
+    width: 33rem;
   }
 
   .page-group{
@@ -56,9 +55,11 @@
       flex-wrap: wrap;
       flex-direction: column-reverse;
       overflow: auto;
-      height: 47rem;
+      height: 40rem;
       width: 45rem;
       margin: auto 0 1rem auto;
+      //background-color: rgba(255, 255, 255, 0.4);
+      //background-color: rgba(304, 255, 138, 0.4);
 
       iframe{
         width: 15rem;
