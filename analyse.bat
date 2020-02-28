@@ -20,7 +20,7 @@ case $CHOICE in
 4) cat access.log | awk -F\" ' { print $6 } ' | sort | uniq -c | sort -rn | head -n 10;;
 5) awk '{print $4}' access.log | cut -d: -f1 | uniq -c;;
 6) cat access.log | awk '{print $1}' | sort | uniq -c | wc -l;;
-7) tailf access.log | awk '{ printf("%-15s\t%s\t%s\t%s\n", $1, $6, $9, $7) }';;
+7) tail -f access.log | awk '{ printf("%-15s\t%s\t%s\t%s\n", $1, $6, $9, $7) }';;
 8) cat access.log | awk '{ print $7 }' | sort | uniq -c | sort -rn | head -n 25;;
 9) cat access.log | awk '{print "requests from " $1}' | sort | uniq -c | sort;;
 10) cat access.* | grep `date '+%b/%G'` | awk '{print $1}' | sort | uniq -c | wc -l;;
