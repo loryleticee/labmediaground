@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/code
+      - logvolume01:/var/log
+    links:
+      - debian
+      - nginx
+  debian:
+    image: debian:stretch
+  nginx:
+    image: nginx
+    depends_on:
+      - debian
+
+volumes:
+  logvolume01: {}

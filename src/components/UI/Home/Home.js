@@ -46,6 +46,13 @@ const Home = () => {
       <>
 
         <div className="page-group">
+          <div className="social-group">
+            <span>{videos.map((video, index) => {
+              return (
+                <div><small key={index}>{video.snippet.title}</small></div>
+              )
+            })}</span>
+          </div>
           <div className={"youtube-canvas"}>
             {
               videos.map((video, index) => {

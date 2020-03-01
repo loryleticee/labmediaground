@@ -15,7 +15,7 @@
     margin-top: auto;
     margin-left: 1rem;
     overflow: auto;
-    height: 19rem;
+    height: 55rem;
 
     iframe{
       align-content: space-between;
@@ -27,8 +27,17 @@
       height:10rem;
     }
   }
-}
 
+  .social-group{
+    display: flex;
+    margin-top:auto;
+    align-content: space-between;
+
+    small{
+      background-color: #E1E1E1;
+    }
+  }
+}
 
 @media (min-width: 768px){
   .page-full{
