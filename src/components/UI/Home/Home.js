@@ -24,6 +24,11 @@ const Home = () => {
         }
     },
   ];
+
+  const social = [
+    ""
+  ];
+
   useEffect(() =>{
     let vdz = videos;
     getVideos().then(data => {
@@ -47,11 +52,14 @@ const Home = () => {
 
         <div className="page-group">
           <div className="social-group">
-            <span>{videos.map((video, index) => {
-              return (
-                <div><small key={index}>{video.snippet.title}</small></div>
-              )
-            })}</span>
+            <iframe
+              width="78%" height="144"
+              scrolling="no" frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/127696064&color=%23ffffff"
+            >
+            </iframe>
+
           </div>
           <div className={"youtube-canvas"}>
             {
