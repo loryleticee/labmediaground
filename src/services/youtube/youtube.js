@@ -55,17 +55,17 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
         <div className="page-group">
           <div className="social-group">
               <iframe
-                width="78%" height="144"
                 scrolling="no" frameBorder="no"
                 allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/127696064&color=%23ffffff"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/127696064&color=%236e9dc7"
+                key={1}
               >
               </iframe>
               <iframe
-                width="78%" height="144"
                 scrolling="no" frameBorder="no"
                 allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/452966157&color=%23ffffff"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/452966157&color=%236e9dc7"
+                key={2}
               >
               </iframe>
 

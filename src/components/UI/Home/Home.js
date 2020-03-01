@@ -9,10 +9,7 @@ const Home = () => {
     if(you.length < 1){
       setYou([1,2])
     }
-  },);
-
-
-  console.log('SUCCES',Youtube);
+  },[you.length]);
 
     if(you.length > 0){
       return (
