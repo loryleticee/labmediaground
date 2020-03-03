@@ -17,8 +17,22 @@ const Home = () => {
         <>
           <Helmet>
             <meta charSet="utf-8" />
-            <title>My Title</title>
-            <link rel="canonical" href="http://mysite.com/example" />
+            <meta name="description" content="Nested component" />
+            <meta property="og:site_name" content="Ayrlomusic"/>
+            <meta property="og:title" content="Ayrlomusic"/>
+            <meta property="og:url" content="https://www.ayrlomusic.com"/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:description" content="The official website of Ayrlo."/>
+            <meta itemProp="name" content="Ayrlo"/>
+            <meta itemProp="url" content="https://www.ayrlomusic.com"/>
+            <meta itemProp="description" content="The official website of Ayrlo."/>
+            <meta name="twitter:title" content="Ayrlo"/>
+            <meta name="twitter:url" content="https://www.ayrlomusic.com"/>
+            <meta name="twitter:card" content="summary"/>
+            <meta name="twitter:description" content="The official website of Ayrlo."/>
+            <meta name="description" content="The official website of Ayrlo."/>
+            <title>Ayrlo Music</title>
+            <link rel="canonical" href="https://www.ayrlomusic.com" />
           </Helmet>
           <Youtube/>
         </>
