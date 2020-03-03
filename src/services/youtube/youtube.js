@@ -59,6 +59,7 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
                 allow="autoplay"
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/127696064&color=%236e9dc7"
                 key={1}
+                title="1"
               >
               </iframe>
               <iframe
@@ -66,6 +67,7 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
                 allow="autoplay"
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/452966157&color=%236e9dc7"
                 key={2}
+                title="2"
               >
               </iframe>
 
