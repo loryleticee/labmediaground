@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&order=date&q=ayrlo&type=video&key="+process.env.REACT_APP_YOUTUBE_API_TOKEN;
+const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=date&q=ayrlo&type=video&key="+process.env.REACT_APP_YOUTUBE_API_TOKEN;
 
  const getVideos = () => {
     return fetch(URL)
@@ -15,19 +15,7 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
         {
             id :
               {
-                  videoId: "kPEA6Kc-6sc"
-              }
-        },
-        {
-            id :
-              {
-                  videoId: "STaNwmExtHg"
-              }
-        },
-        {
-            id :
-              {
-                  videoId: "r1qllo-mnP8"
+                videoId: "kPEA6Kc-6sc"
               }
         },
     ];
