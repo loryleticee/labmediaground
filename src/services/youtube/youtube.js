@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&order=date&q=ayrlo&type=video&key="+process.env.REACT_APP_YOUTUBE_API_TOKEN;
+const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&order=date&q=ayrlo&type=video&key="+process.env.REACT_APP_YOUTUBE_API_TOKEN;
 
  const getVideos = () => {
     return fetch(URL)
@@ -15,19 +15,19 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
         {
             id :
               {
-                  videoId: "Kxwwv6swXQk"
+                  videoId: "kPEA6Kc-6sc"
               }
         },
         {
             id :
               {
-                  videoId: "hoGY5RYvT0U"
+                  videoId: "STaNwmExtHg"
               }
         },
         {
             id :
               {
-                  videoId: "xhKivXtrsGU"
+                  videoId: "r1qllo-mnP8"
               }
         },
     ];
@@ -62,15 +62,6 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
                 title="1"
               >
               </iframe>
-              <iframe
-                scrolling="no" frameBorder="no"
-                allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/452966157&color=%236e9dc7"
-                key={2}
-                title="2"
-              >
-              </iframe>
-
           </div>
           <div className={"youtube-canvas"}>
               {
