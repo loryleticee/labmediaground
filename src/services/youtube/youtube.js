@@ -42,28 +42,14 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
       <>
         <div className="page-group">
           <div className="social-group">
-              <iframe
-                scrolling="no" frameBorder="no"
-                allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/127696064&color=%236e9dc7"
-                key={1}
-                title="1"
-              >
-              </iframe>
+
           </div>
           <div className={"youtube-canvas"}>
-              {
-                  videos.map((video, index) => {
-                      return (
-                        <iframe
-                          title={index}
-                          key ={index}
-                          src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                          frameBorder="0"
-                        />
-                      )
-                  })
-              }
+            <iframe
+              width="100%" height="450"
+              scrolling="no" frameBorder="no" allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/4529664&color=%2364f7f7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
           </div>
       </div>
     </>
