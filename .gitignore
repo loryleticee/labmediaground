@@ -1,3 +1,13 @@
 node_modules
 .env
 build
+manifest.json
+static
+precache-manifest.*.js
+logo192.png
+logo512.png
+favicon.ico
+index.html
+cron.txt
+asset-manifest.json
+
