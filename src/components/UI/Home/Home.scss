@@ -6,7 +6,7 @@
 
   .youtube-canvas{
     display: flex;
-    width: 33rem;
+    width: 30rem;
   }
 
   .page-group{
@@ -14,6 +14,7 @@
     flex-wrap: wrap;
     margin-top: auto;
     margin-left: 1rem;
+    margin-right: 1rem;
     overflow: auto;
 
     iframe{
@@ -63,7 +64,6 @@
     .page-group{
       display: flex;
       flex-wrap: wrap;
-      //flex-direction: column-reverse;
       overflow: auto;
       height: 32rem;
       width: 45rem;
