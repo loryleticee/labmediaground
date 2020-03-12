@@ -53,6 +53,10 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
             <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3994137191/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
               <a href="http://ayrlo.bandcamp.com/album/love-is-a-real-suffering-ep">Love is A Real Suffering EP by Ayrlo</a>
             </iframe>
+            <iframe
+              src="https://open.spotify.com/embed/track/2ABntc5GHtGRLOPZ94uJ4x"
+              frameBorder="0" allowTransparency="true" allow="encrypted-media">
+            </iframe>
           </div>
       </div>
     </>
