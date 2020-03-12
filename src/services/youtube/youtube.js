@@ -50,13 +50,8 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
               scrolling="no" frameBorder="no" allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/4529664&color=%2364f7f7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
             </iframe>
-            <iframe
-              key="1" title="AYRLOMUSIC Bandcamp playlist"
-              style="border: 0; width: 350px; height: 470px;"
-              src="https://bandcamp.com/EmbeddedPlayer/album=3994137191/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless>
-              <a href="http://ayrlo.bandcamp.com/album/love-is-a-real-suffering-ep">
-                Love is A Real Suffering EP by Ayrlo
-              </a>
+            <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3994137191/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
+              <a href="http://ayrlo.bandcamp.com/album/love-is-a-real-suffering-ep">Love is A Real Suffering EP by Ayrlo</a>
             </iframe>
           </div>
       </div>
