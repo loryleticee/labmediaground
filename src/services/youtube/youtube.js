@@ -50,7 +50,6 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
               scrolling="no" frameBorder="no" allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/4529664&color=%2364f7f7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
             </iframe>
-            
             <iframe
               key="2" title='AYRLOMUSIC Bandcamp playlist'
               src="https://bandcamp.com/EmbeddedPlayer/album=3994137191/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless>
@@ -60,7 +59,7 @@ const URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResult
             <iframe
               key="3" title='AYRLOMUSIC Spotify playlist'
               src="https://open.spotify.com/embed/track/2ABntc5GHtGRLOPZ94uJ4x"
-              frameBorder="0" allowTransparency="true" allow="encrypted-media">
+              frameBorder="0" allow="encrypted-media">
             </iframe>
           </div>
       </div>
