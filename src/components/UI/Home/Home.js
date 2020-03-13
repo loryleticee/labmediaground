@@ -22,7 +22,8 @@ const Home = () => {
           <meta property='og:title' content='Ayrlomusic' />
           <meta property='og:url' content='https://www.ayrlomusic.com' />
           <meta property='og:type' content='website' />
-          <meta property='og:description' content='The official website of Ayrlo.' />
+          <meta property='og:description' content='The official website of AYRLOMUSIC.' />
+          <meta property='og:image' content='./images/ayrlomusic-background-full.jpg' />
           <meta itemProp='name' content='Ayrlo' />
           <meta itemProp='url' content='https://www.ayrlomusic.com' />
           <meta itemProp='description' content='The official website of Ayrlo.' />
