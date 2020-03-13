@@ -1,6 +1,6 @@
 export const messages_en = () => (
-    {
-        "app.welcome":
-            "Welcome Guys",
-    }
-);
+  {
+    'app.welcome':
+            'Welcome Guys'
+  }
+)
