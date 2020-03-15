@@ -37,24 +37,31 @@ const Youtube = (props) => {
     })
   }, [videos])
 
+  /**var dt = new Date();
+  if (dt.getDay()%2 == 0) {
+    //pair; 
+  } else{
+    //impair
+  }**/
+      
   return (
     <>
       <div className='page-group'>
-        <div className='social-group' />
+        <div className='social-group'>
+
+        </div>
         <div className='youtube-canvas'>
           <div>
-            <small>Soundcloud</small>
             <iframe
-              key='0' title='AYRLOMUSIC Soundcloud playlist'
+              key='soundcloud' title='AYRLOMUSIC Soundcloud playlist'
               scrolling='no' frameBorder='no' allow='autoplay'
               src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/4529664&color=%2364f7f7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
             />
           </div>
 
           <div>
-            <small>Bandcamp</small>
             <iframe
-              key='2' title='AYRLOMUSIC Bandcamp playlist'
+              key='bandcamp' title='AYRLOMUSIC Bandcamp playlist'
               src='https://bandcamp.com/EmbeddedPlayer/album=3994137191/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/' seamless
             >
               <a href='http://ayrlo.bandcamp.com/album/love-is-a-real-suffering-ep'>Love is A Real Suffering EP by Ayrlo</a>
@@ -62,9 +69,8 @@ const Youtube = (props) => {
           </div>
 
           <div>
-            <small>Spotify</small>
             <iframe
-              key='3' title='AYRLOMUSIC Spotify playlist'
+              key='spotify' title='AYRLOMUSIC Spotify playlist'
               src='https://open.spotify.com/embed/track/2ABntc5GHtGRLOPZ94uJ4x'
               frameBorder='0' allowTransparency='true' allow='encrypted-media'
             />

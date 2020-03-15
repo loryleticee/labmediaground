@@ -1,3 +1,8 @@
+ayrlomusic{
+  display: flex;
+  justify-content: center;
+}
+
 .page-full{
   background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
   background-size: cover;
@@ -23,7 +28,7 @@
       margin-bottom: 1rem;
       border: 3px solid #E1E1E1;
       border-radius: 6px 6px 6px 6px;
-      width:23rem;
+      width:20rem;
       height:20rem;
     }
   }
