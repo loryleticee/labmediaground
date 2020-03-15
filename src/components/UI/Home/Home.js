@@ -44,7 +44,7 @@ const Home = () => {
   }
   return (
     <>
-      <ayrlomusic>Wainting for a moment </ayrlomusic>
+      <div className='nopage'> AYRLOMUSIC load... </div>
     </>
   )
 }
