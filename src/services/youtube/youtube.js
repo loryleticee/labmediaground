@@ -37,21 +37,19 @@ const Youtube = (props) => {
     })
   }, [videos])
 
-  /**var dt = new Date();
+  /** var dt = new Date();
   if (dt.getDay()%2 == 0) {
-    //pair; 
+    //pair;
   } else{
     //impair
   }**/
-      
+
   return (
     <>
       <div className='page-group'>
-        <div className='social-group'>
-
-        </div>
+        <div className='social-group' />
         <div className='youtube-canvas'>
-          <div class="robots-noindex robots-nofollow">
+          <div class='robots-noindex robots-nofollow'>
             <iframe
               key='soundcloud' title='AYRLOMUSIC Soundcloud playlist'
               scrolling='no' frameBorder='no' allow='autoplay'
@@ -59,7 +57,7 @@ const Youtube = (props) => {
             />
           </div>
 
-          <div class="robots-noindex robots-nofollow">
+          <div class='robots-noindex robots-nofollow'>
             <iframe
               key='bandcamp' title='AYRLOMUSIC Bandcamp playlist'
               src='https://bandcamp.com/EmbeddedPlayer/album=3994137191/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/' seamless
@@ -68,7 +66,7 @@ const Youtube = (props) => {
             </iframe>
           </div>
 
-          <div class="robots-noindex robots-nofollow">
+          <div class='robots-noindex robots-nofollow'>
             <iframe
               key='spotify' title='AYRLOMUSIC Spotify playlist'
               src='https://open.spotify.com/embed/track/2ABntc5GHtGRLOPZ94uJ4x'

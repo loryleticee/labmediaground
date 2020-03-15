@@ -18,7 +18,7 @@ const Home = () => {
     return (
       <>
         <Helmet>
-          <link rel="shortcut icon" type="image/x-icon" href="dee/favicon.ico"></link>
+          <link rel='shortcut icon' type='image/x-icon' href='dee/favicon.ico' />
           <meta charSet='utf-8' />
           <meta name='description' content='Nested component' />
           <meta property='og:site_name' content='AYRLOMUSIC' />
