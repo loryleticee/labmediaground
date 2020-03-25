@@ -37,18 +37,21 @@ const Youtube = (props) => {
     })
   }, [videos])
 
-  /** var dt = new Date();
-  if (dt.getDay()%2 == 0) {
-    //pair;
-  } else{
-    //impair
-  }**/
-
   return (
     <>
       <div className='page-group'>
         <div className='social-group' />
         <div className='youtube-canvas'>
+
+          <div class='robots-noindex robots-nofollow'>
+            <iframe
+              key='facebook' title='AYRLOMUSIC Facebook Live'
+              src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FAyrloOfficiel%2Fvideos%2F1621544407998737%2F&show_text=1&width=560'
+              width='560' height='476' style={{ border: 'none', overflow: 'hidden' }} scrolling='no' frameborder='0'
+              allow='encrypted-media' allowFullScreen='true'
+            />
+          </div>
+
           <div class='robots-noindex robots-nofollow'>
             <iframe
               key='soundcloud' title='AYRLOMUSIC Soundcloud playlist'
@@ -66,13 +69,6 @@ const Youtube = (props) => {
             </iframe>
           </div>
 
-          <div class='robots-noindex robots-nofollow'>
-            <iframe
-              key='spotify' title='AYRLOMUSIC Spotify playlist'
-              src='https://open.spotify.com/embed/track/2ABntc5GHtGRLOPZ94uJ4x'
-              frameBorder='0' allowTransparency='true' allow='encrypted-media'
-            />
-          </div>
         </div>
       </div>
     </>
