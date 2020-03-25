@@ -47,8 +47,8 @@ const Youtube = (props) => {
             <iframe
               key='facebook' title='AYRLOMUSIC Facebook Live'
               src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FAyrloOfficiel%2Fvideos%2F1621544407998737%2F&show_text=1&width=560'
-              width='560' height='476' style={{ backgroundColor:'white', border: 'none', overflow: 'hidden' }} scrolling='no' frameborder='0'
-              allow='encrypted-media' allowFullScreen='true'
+              style={{background:'white', color:'white', border: '12px', overflow: 'hidden'}} scrolling='no' frameborder='0'
+              allow='encrypted-media' allowFullScreen='false'
             />
           </div>
 
