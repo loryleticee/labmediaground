@@ -31,7 +31,7 @@ const Home = () => {
           <meta itemProp='url' content='https://www.ayrlomusic.com' />
           <meta itemProp='description' content='The official website of AYRLOMUSIC' />
           <meta name='twitter:title' content='AYRLOMUSIC' />
-          <meta name='twitter:url' content='https://www.ayrlomusic.com' />
+          <meta name='twitter:url' content='https://twitter.com/ayrlo_music' />
           <meta name='twitter:card' content='summary' />
           <meta name='twitter:description' content='The official website of AYRLOMUSIC.' />
           <meta name='description' content='The official website of AYRLOMUSIC.' />
@@ -44,7 +44,7 @@ const Home = () => {
   }
   return (
     <>
-      <div className='nopage'> AYRLOMUSIC load... </div>
+      <div style={{whidth :'100vh', backgroundColor:'black'}}></div>
     </>
   )
 }
