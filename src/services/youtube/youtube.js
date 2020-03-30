@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
 const URL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=date&q=ayrlo&type=video&key=' + process.env.REACT_APP_YOUTUBE_API_TOKEN
 
 const getVideos = () => {
@@ -43,14 +42,11 @@ const Youtube = (props) => {
         <div className='social-group' />
         <div className='youtube-canvas'>
 
-          <div class='robots-noindex robots-nofollow'>
-            <iframe
-              key='facebook' title='AYRLOMUSIC Facebook Live'
-              src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FAyrloOfficiel%2Fvideos%2F1621544407998737%2F&show_text=1&width=560'
-              style={{background:'white', color:'white', border: '12px', overflow: 'hidden'}} scrolling='no' frameborder='0'
-              allow='encrypted-media' allowFullScreen='false'
-            />
-          </div>
+          {/*
+            <div class='robots-noindex robots-nofollow'>
+           
+            </div>
+          */}
 
           <div class='robots-noindex robots-nofollow'>
             <iframe
