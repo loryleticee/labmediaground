@@ -7,7 +7,7 @@ import twitt from '../../images/twitter-icon.svg'
 import vimeo from '../../images/vimeo-icon.svg'
 import youtu from '../../images/youtube-icon.svg'
 import twitch from '../../images/twitch-icon.svg'
-const URL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=date&q=ayrlo&type=video&key=' + process.env.REACT_APP_YOUTUBE_API_TOKEN
+const URL = process.env.REACT_APP_YOUTUBE_URL + process.env.REACT_APP_YOUTUBE_API_TOKEN
 
 const getVideos = () => {
   return fetch(URL)
@@ -67,6 +67,14 @@ const Youtube = (props) => {
             </iframe>
           </div>
 
+          <div class='robots-noindex robots-nofollow'>
+            <iframe 
+              ùkey='bandcamp' title='AYRLOMUSIC Bandcamp playlist'
+              src="https://open.spotify.com/embed/artist/6HWyQdeOe1NedWpHroXRxB" 
+              width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+            </iframe>
+          </div>
+<iframe src="https://embed.tidal.com/albums/75413011" style="border: 0; width: 100%; height: 300px;" allowfullscreen allow="encrypted-media"></iframe>
           <div class='robots-noindex robots-nofollow networks'>
             <a href='https://ayrlomusic.tumblr.com' target='_top'><img src={tumb} alt='Ayrlo on Tumblr' /></a>
             <a href='https://www.twitch.tv/ayrlomusic' target='_top'><img src={twitch} alt='Ayrlo on Twitch' /></a>
