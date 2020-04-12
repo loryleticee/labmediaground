@@ -26,22 +26,24 @@
       align-content: space-between;
       margin-top: 1rem;
       margin-bottom: 1rem;
-      border: 3px solid #E1E1E1;
+      //border: 3px solid #E1E1E1;
       border-radius: 6px 6px 6px 6px;
       width:20rem;
       height:20rem;
     }
     .networks{
     display: flex;
-    justify-content: space-between;
 
-    iframe, img{
+    a{
+      flex-shrink: 0;
+    }
+    /*iframe, img{
       margin-left: 3rem;
       border: 3px solid #E1E1E1;
       border-radius: 6px 6px 6px 6px;
       width:2rem;
       height:2rem;
-    }
+    }*/
   }
 
   }
@@ -66,31 +68,25 @@
 
 @media (min-width: 768px){
   .page-full{
-    background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
-    height: 100vh;
-    background-size: cover;
+    //background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
     background-position-x: center;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding-right: 4rem;
 
     .youtube-canvas{
       margin: 0.8rem;
       display: flex;
       width: 30rem;
       margin-left: auto;
-      flex-direction: column;
+      //flex-direction: column;
     }
 
     .page-group{
       display: flex;
       flex-wrap: wrap;
-      overflow: auto;
+      /*overflow: auto;
       height: 98%;
       width: 100%;
       margin: auto 0 1rem auto;
-
+*/
       iframe, img{
         width:30rem;
         height:30rem;
