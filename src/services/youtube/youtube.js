@@ -7,7 +7,7 @@ import twitt from '../../images/twitter-icon.svg'
 import vimeo from '../../images/vimeo-icon.svg'
 import youtu from '../../images/youtube-icon.svg'
 import twitch from '../../images/twitch-icon.svg'
-const URL = process.env.REACT_APP_YOUTUBE_URL + process.env.REACT_APP_YOUTUBE_API_TOKEN
+const URL = 'https://www.googleapis.com/' + process.env.REACT_APP_YOUTUBE_URL + process.env.REACT_APP_YOUTUBE_API_TOKEN
 
 const getVideos = () => {
   return fetch(URL)
