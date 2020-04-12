@@ -67,6 +67,14 @@ const Youtube = (props) => {
             </iframe>
           </div>
 
+          <div class='robots-noindex robots-nofollow'>
+            <iframe 
+              key='spotify' title='AYRLOMUSIC Spotify playlist'
+              src="https://open.spotify.com/embed/artist/6HWyQdeOe1NedWpHroXRxB" 
+              frameBorder="0" allowtransparency="true" allow="encrypted-media">
+            </iframe>
+          </div>
+
           <div class='robots-noindex robots-nofollow networks'>
             <a href='https://ayrlomusic.tumblr.com' target='_top'><img src={tumb} alt='Ayrlo on Tumblr' /></a>
             <a href='https://www.twitch.tv/ayrlomusic' target='_top'><img src={twitch} alt='Ayrlo on Twitch' /></a>
