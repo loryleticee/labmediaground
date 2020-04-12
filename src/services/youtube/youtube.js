@@ -69,12 +69,12 @@ const Youtube = (props) => {
 
           <div class='robots-noindex robots-nofollow'>
             <iframe 
-              ùkey='bandcamp' title='AYRLOMUSIC Bandcamp playlist'
+              key='spotify' title='AYRLOMUSIC Spotify playlist'
               src="https://open.spotify.com/embed/artist/6HWyQdeOe1NedWpHroXRxB" 
-              width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+              frameBorder="0" allowtransparency="true" allow="encrypted-media">
             </iframe>
           </div>
-<iframe src="https://embed.tidal.com/albums/75413011" style="border: 0; width: 100%; height: 300px;" allowfullscreen allow="encrypted-media"></iframe>
+
           <div class='robots-noindex robots-nofollow networks'>
             <a href='https://ayrlomusic.tumblr.com' target='_top'><img src={tumb} alt='Ayrlo on Tumblr' /></a>
             <a href='https://www.twitch.tv/ayrlomusic' target='_top'><img src={twitch} alt='Ayrlo on Twitch' /></a>
