@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import tumb from '../../images/tumblr-icon.svg'
 import insta from '../../images/instagram-icon.svg'
 import faceb from '../../images/facebook-icon.svg'
@@ -7,42 +7,8 @@ import twitt from '../../images/twitter-icon.svg'
 import vimeo from '../../images/vimeo-icon.svg'
 import youtu from '../../images/youtube-icon.svg'
 import twitch from '../../images/twitch-icon.svg'
-const URL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=date&q=ayrlo&type=video&key=' + process.env.REACT_APP_YOUTUBE_API_TOKEN
-
-const getVideos = () => {
-  return fetch(URL)
-    .then(response => response.json())
-    .catch(err => err || {})
-}
 
 const Youtube = (props) => {
-  const [videos, setVideos] = useState([])
-  const init = [
-    {
-      id:
-          {
-            videoId: 'kPEA6Kc-6sc'
-          }
-    }
-  ]
-
-  useEffect(() => {
-    let vdz = videos
-    getVideos().then(data => {
-      if (vdz.length > 0) {
-      } else {
-        vdz = ['', '']
-
-        if (data.error !== undefined) {
-          setVideos(
-            init
-          )
-          return
-        }
-        setVideos(data.items)
-      }
-    })
-  }, [videos])
 
   return (
     <>
@@ -50,7 +16,7 @@ const Youtube = (props) => {
         <div className='social-group' />
         <div className='youtube-canvas'>
           
-          <div class='robots-noindex robots-nofollow'>
+          <div className='robots-noindex robots-nofollow'>
             <iframe
               key='soundcloud' title='AYRLOMUSIC Soundcloud playlist'
               scrolling='no' frameBorder='no' allow='autoplay'
@@ -58,7 +24,7 @@ const Youtube = (props) => {
             />
           </div>
 
-          <div class='robots-noindex robots-nofollow'>
+          <div className='robots-noindex robots-nofollow'>
             <iframe
               key='bandcamp' title='AYRLOMUSIC Bandcamp playlist'
               src='https://bandcamp.com/EmbeddedPlayer/album=3994137191/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/' seamless
@@ -67,7 +33,7 @@ const Youtube = (props) => {
             </iframe>
           </div>
 
-          <div class='robots-noindex robots-nofollow'>
+          <div className='robots-noindex robots-nofollow'>
             <iframe 
               key='spotify' title='AYRLOMUSIC Spotify playlist'
               src="https://open.spotify.com/embed/artist/6HWyQdeOe1NedWpHroXRxB" 
@@ -75,7 +41,20 @@ const Youtube = (props) => {
             </iframe>
           </div>
 
-          <div class='robots-noindex robots-nofollow networks'>
+          <div className='robots-noindex robots-nofollow networks'>
+            <div Style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden; max-width: 100%;">
+              <iframe 
+                key='tidal' title='AYRLOMUSIC Tidal playlist'
+                src="https://embed.tidal.com/albums/121629603?layout=gridify" 
+                frameBorder="0" 
+                allowFullScreen 
+                Style="position: absolute; top: 0; left: 0; width: 100%; height: 1px; min-height: 100%; margin: 0 auto;"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <div className='robots-noindex robots-nofollow networks'>
             <a href='https://ayrlomusic.tumblr.com' target='_top'><img src={tumb} alt='Ayrlo on Tumblr' /></a>
             <a href='https://www.twitch.tv/ayrlomusic' target='_top'><img src={twitch} alt='Ayrlo on Twitch' /></a>
             <a href='https://www.youtube.com/channel/UCazuAKGOsC6XXc-h1zRNWYw' target='_top'><img src={youtu} alt='Ayrlo on Youtube' /></a>
