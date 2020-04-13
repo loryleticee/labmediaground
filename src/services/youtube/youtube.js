@@ -8,7 +8,7 @@ import vimeo from '../../images/vimeo-icon.svg'
 import youtu from '../../images/youtube-icon.svg'
 import twitch from '../../images/twitch-icon.svg'
 
-const Youtube = () => {
+const Youtube = (props) => {
 
   return (
     <>
@@ -42,16 +42,13 @@ const Youtube = () => {
           </div>
 
           <div className='robots-noindex robots-nofollow networks'>
-            <div Style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden; max-width: 100%;">
               <iframe 
                 key='tidal' title='AYRLOMUSIC Tidal playlist'
                 src="https://embed.tidal.com/albums/121629603?layout=gridify" 
                 frameBorder="0" 
                 allowFullScreen 
-                Style="position: absolute; top: 0; left: 0; width: 100%; height: 1px; min-height: 100%; margin: 0 auto;"
               >
               </iframe>
-            </div>
           </div>
 
           <div className='robots-noindex robots-nofollow networks'>
