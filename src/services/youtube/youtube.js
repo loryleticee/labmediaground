@@ -8,7 +8,7 @@ import vimeo from '../../images/vimeo-icon.svg'
 import youtu from '../../images/youtube-icon.svg'
 import twitch from '../../images/twitch-icon.svg'
 
-const Youtube = (props) => {
+const Youtube = () => {
 
   return (
     <>
