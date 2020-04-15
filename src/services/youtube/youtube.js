@@ -6,6 +6,7 @@ import pinte from '../../images/pinterest-icon.svg'
 import twitt from '../../images/twitter-icon.svg'
 import vimeo from '../../images/vimeo-icon.svg'
 import youtu from '../../images/youtube-icon.svg'
+import snap from '../../images/snap-icon.jpg'
 import twitch from '../../images/twitch-icon.svg'
 
 const Youtube = (props) => {
@@ -52,6 +53,7 @@ const Youtube = (props) => {
           </div>
 
           <div className='robots-noindex robots-nofollow networks'>
+            <img src={snap} alt='Ayrlo on Snapchat' />
             <a href='https://ayrlomusic.tumblr.com' target='_top'><img src={tumb} alt='Ayrlo on Tumblr' /></a>
             <a href='https://www.twitch.tv/ayrlomusic' target='_top'><img src={twitch} alt='Ayrlo on Twitch' /></a>
             <a href='https://www.youtube.com/channel/UCazuAKGOsC6XXc-h1zRNWYw' target='_top'><img src={youtu} alt='Ayrlo on Youtube' /></a>
