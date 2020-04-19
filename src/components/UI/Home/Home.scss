@@ -48,14 +48,12 @@
       margin: 1rem auto 0 ;
     }
   }
-
-  
-
 }
 
 @media (min-width: 768px){
   .page-full{
     background-position-x: center;
+    overflow: auto;
 
     .youtube-canvas{
       display: flex;
