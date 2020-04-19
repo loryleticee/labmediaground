@@ -2,8 +2,9 @@ import React from 'react'
 import './Home.scss'
 import logo from '../../../images/logo.svg'
 
-import Youtube from '../../../services/youtube/youtube'
 import { Helmet } from 'react-helmet'
+
+import Index from '../../../services/index'
 
 const Home = () => {
   return (
@@ -29,7 +30,7 @@ const Home = () => {
         <title>Ayrlo Music</title>
         <link rel='canonical' href='https://www.ayrlomusic.com' />
       </Helmet>
-      <Youtube />
+      <Index />
     </>
   )
 }
