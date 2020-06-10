@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.scss'
-import logo from '../../../images/logo.svg'
+import logo from '../../../images/logo192.png'
 
 import { Helmet } from 'react-helmet'
 
@@ -10,7 +10,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <link rel='shortcut icon' type='image/x-icon' href='dee/favicon.ico' />
+        <script src='https://use.fontawesome.com/f8f0464e24.js' />
+        <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
         <meta charSet='utf-8' />
         <meta name='description' content='Ayrlo official website' />
         <meta property='og:site_name' content='AYRLOMUSIC' />
@@ -27,7 +28,6 @@ const Home = () => {
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:description' content='The official website of AYRLO.' />
         <meta name='description' content='The official website of AYRLO.' />
-        <title>Ayrlo Music</title>
         <link rel='canonical' href='https://www.ayrlomusic.com' />
       </Helmet>
       <Index />
