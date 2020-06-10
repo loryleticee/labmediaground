@@ -27,7 +27,6 @@ const Home = () => {
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:description' content='The official website of AYRLO.' />
         <meta name='description' content='The official website of AYRLO.' />
-        <title>Ayrlo Music</title>
         <link rel='canonical' href='https://www.ayrlomusic.com' />
       </Helmet>
       <Index />
