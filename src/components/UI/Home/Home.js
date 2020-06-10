@@ -10,7 +10,6 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <script src='https://use.fontawesome.com/f8f0464e24.js' />
         <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
         <meta charSet='utf-8' />
         <meta name='description' content='Ayrlo official website' />
