@@ -1,7 +1,7 @@
 import React from 'react'
 //import Social from '../social/social'
 import Soundcloud from '../soundcloud/soundcloud'
-import Bandcamp from '../bandcamp/bandcamp'
+import Shop from '../shop/shop'
 import Spotify from '../spotify/spotify'
 
 //const Soundcloud = React.lazy(() => import('../soundcloud/soundcloud'))
@@ -16,7 +16,7 @@ const Index = (props) => {
         <div className='social-group' />
         <div className='youtube-canvas'>
             <Soundcloud />
-            <Bandcamp />
+            <Shop />
             <Spotify />
         </div>
       </div>
