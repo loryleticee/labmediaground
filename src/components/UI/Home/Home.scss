@@ -12,6 +12,12 @@
   .youtube-canvas{
     display: flex;
     width: 30rem;
+    img,iframe{&:hover {
+      opacity: .8;
+    }}
+    iframe{&:hover {
+      opacity: .9;
+    }}
   }
 
   .page-group{
@@ -58,6 +64,13 @@
     .youtube-canvas{
       display: flex;
       width: auto;
+
+      img,iframe{&:hover {
+      opacity: .8;
+      }}
+      iframe{&:hover {
+        opacity: .9;
+      }}
     }
 
     .page-group{
