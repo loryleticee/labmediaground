@@ -4,7 +4,7 @@
 }
 
 .page-full{
-  background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
+  background: url("../../../images/ayrlomusic-background-full-mobile.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -58,6 +58,7 @@
 
 @media (min-width: 768px){
   .page-full{
+    background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
     background-position-x: center;
     overflow: auto;
 
