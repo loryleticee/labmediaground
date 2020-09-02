@@ -11,12 +11,11 @@
 
   .youtube-canvas{
     display: flex;
-    width: 30rem;
     img,iframe{&:hover {
-      opacity: .8;
+      opacity: .5;
     }}
     iframe{&:hover {
-      opacity: .9;
+      opacity: .5;
     }}
   }
 
@@ -31,10 +30,10 @@
     iframe, img{
       align-content: space-between;
       margin-top: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       border-radius: 6px 6px 6px 6px;
-      width:20rem;
-      height:20rem;
+      width:15rem;
+      height:15rem;
     }
     .networks{
       display: flex;
@@ -56,22 +55,15 @@
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
   .page-full{
-    background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
+    //background: url("../../../images/ayrlomusic-background-full.jpg") no-repeat;
     background-position-x: center;
     overflow: auto;
 
     .youtube-canvas{
       display: flex;
       width: auto;
-
-      img,iframe{&:hover {
-      opacity: .8;
-      }}
-      iframe{&:hover {
-        opacity: .9;
-      }}
     }
 
     .page-group{
