@@ -27,30 +27,12 @@
     margin-right: 1rem;
     overflow: auto;
 
-    span, img,iframe{
+    span, img, iframe{
       align-content: space-between;
-      margin-top: 1rem;
       margin-right: 1rem;
       margin-bottom: 3rem;
       border-radius: 6px 6px 6px 6px;
       height:300px;
-    }
-    .networks{
-      display: flex;
-    }
-
-  }
-
-  .social-group{
-    display: flex;
-    align-content: space-between;
-
-    small{
-      background-color: #E1E1E1;
-    }
-
-    iframe{
-      margin: 1rem auto 0 ;
     }
   }
 }
@@ -68,19 +50,13 @@
     .page-group{
       display: flex;
       flex-wrap: wrap;
+      margin-left: 10rem;
+      overflow: auto;
 
       iframe, img{
-        width:30rem;
-        height:30rem;
+        width:25rem;
+        height:25rem;
         border: 20px solid transparentize($color: #000000, $amount: 1);
-      }
-    }
-
-    .networks{
-      display: flex;
-      
-      iframe, img{
-        border-radius: 6px 6px 6px 6px;
       }
     }
   }
