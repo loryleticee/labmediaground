@@ -82,8 +82,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://ayrlomusic.com/">
+        Ayrlomusic
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -135,7 +135,7 @@ export default function SignInSide() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            VISITE 
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
@@ -149,17 +149,6 @@ export default function SignInSide() {
               autoComplete="email"
               autoFocus
             />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -171,10 +160,10 @@ export default function SignInSide() {
               color="primary"
               className={classes.submit}
             >
-              Sign In
+              ACCÉDER AU CONTENU INÉDIT
             </Button>
             <Grid container>
-              <Grid item xs>
+              {/* <Grid item xs>
                 <Link href="#" variant="body2">
                   Forgot password?
                 </Link>
@@ -183,7 +172,7 @@ export default function SignInSide() {
                 <Link href="#" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
-              </Grid>
+              </Grid> */}
             </Grid>
             <Box mt={5}>
               <Copyright />
