@@ -72,7 +72,7 @@ function getRandomInt(max) {
 function randomPictureBackground () {
   const array = [
     {'url' :'3000x3000-833536--2B2FDBC5-6578-4B26-90B49466F8FA9618--1615598846428--AYRLOMUSICAyrloRedCastle.jpg'},
-    {'url' :'3000x3000-833536--2B2FDBC5-6578-4B26-90B49466F8FA9618--1615598846428--AYRLOMUSICAyrloRedCastle.jpg'},
+    {'url' :'3000x3000-833536--4C41CA74-062E-4BB6-864D042CFC8D686F--1610075332921--Malika.jpg'},
   ]
   
   return array[getRandomInt(2)]
