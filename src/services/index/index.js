@@ -80,7 +80,7 @@ function randomPictureBackground () {
     {'url' :'3000x3000-833536--C198689A-856F-4BDA-A298F896314D473F--1604247700252--AyrlomusicFUEGO.jpg'},
   ]
   
-  return array[getRandomInt(2)]
+  return array[getRandomInt(array.length-1)]
 }
 
 function Copyright() {
