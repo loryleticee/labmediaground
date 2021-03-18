@@ -82,18 +82,6 @@ function randomPictureBackground () {
   return array[getRandomInt(array.length-1)]
 }
 
-const Soundcloud = (props) => {
-  return (
-    <div className='robots-noindex robots-nofollow'>
-      <iframe
-        key='soundcloud' title='AYRLOMUSIC Soundcloud playlist'
-        scrolling='no' frameBorder='no' allow='autoplay'
-        src={randomPictureBackground().src}
-      />
-    </div>
-  )
-}
-
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -103,7 +91,6 @@ function Copyright() {
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
-      {Soundcloud()}
     </Typography>
   );
 }
