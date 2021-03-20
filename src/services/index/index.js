@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: "url(https://ayrlomusic.com/" + randomPictureBackground().url + ")",
+    backgroundImage: "url(/" + randomPictureBackground().url + ")",
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -130,11 +130,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide() {
   const classes = useStyles();
-
   const [values, setValues] = useState({
     email: '',
     error: false,
-  })
+  });
   /**
    * 
    * @param {e} value email
@@ -213,7 +212,6 @@ export default function SignInSide() {
               variant="contained"
               color="primary"
               className={classes.submit}
-
             >
               ACCÉDER AU CONTENU INÉDIT
             </Button>

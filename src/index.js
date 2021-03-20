@@ -5,10 +5,6 @@ import './components/UI/Home/Home.scss'
 import Home from './components/UI/Home/Home'
 import * as serviceWorker from './serviceWorker'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { applyMiddleware, compose, createStore } from 'redux'
-import { adminReducer } from './store/reducers'
-import { Provider } from 'react-redux'
-import ReduxThunk from 'redux-thunk'
 
 import {
   BrowserRouter as Router,
@@ -16,19 +12,7 @@ import {
   Route
 } from 'react-router-dom'
 
-// MIDDLEWARE
-const middleWare = store => next => action => {
-  return next(action)
-}
-
-export const store = createStore(adminReducer,
-  compose(
-    applyMiddleware(ReduxThunk, middleWare)
-  )
-)
-
 ReactDOM.render(
-  <Provider store={store}>
     <Router>
       <div className='page-full'>
         <Switch>
@@ -36,7 +20,7 @@ ReactDOM.render(
         </Switch>
       </div>
     </Router>
-  </Provider>
+
   , document.getElementById('root')
 )
 
