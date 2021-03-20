@@ -1,0 +1,25 @@
+name: deploy-prod
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Prod
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_SERVER_AYRLOMUSIC }}
+          username: ${{ secrets.SSH_USER_AYRLOMUSIC }}
+          password: ${{ secrets.SSH_PASSWORD_AYRLOMUSIC }}
+          port: ${{ secrets.SSH_PORT_AYRLOMUSIC }}
+          script: |
+            cd /var/www/html/ayrlomusic
+            git fetch 
+            git stash
+            git pull origin dev
+            yarn
+            yarn build
+            git stash pop
