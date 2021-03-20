@@ -1,67 +1,36 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	</head>
-<style>
 
-/*======================
-    404 page
-=======================*/
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
 
+<body>
+    <div id="parallax">
+        <h1 style="text-transform: uppercase;">ayrlomusic ‼️</h1>
+    </div>
+    <script>
+        (function () {
+            // Add event listener
+            document.addEventListener("mousemove", parallax);
+            const elem = document.querySelector("#parallax");
+            // Magic happens here
+            function parallax(e) {
+                let _w = window.innerWidth / 2;
+                let _h = window.innerHeight / 2;
+                let _mouseX = e.clientX;
+                let _mouseY = e.clientY;
+                let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+                let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+                let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+                let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+                console.log(x);
+                elem.style.backgroundPosition = x;
+            }
 
-.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
-}
+        })();
+    </script>
+</body>
 
-.page_404  img{ width:100%;}
-
-.four_zero_four_bg{
-
- background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-    height: 400px;
-    background-position: center;
- }
-
-
- .four_zero_four_bg h1{
- font-size:80px;
- }
-
-  .four_zero_four_bg h3{
-			 font-size:80px;
-			 }
-
-			 .link_404{
-	color: #fff!important;
-    padding: 10px 20px;
-    background: #39ac31;
-    margin: 20px 0;
-    display: inline-block;}
-	.contant_box_404{ margin-top:-50px;}
-</style>
-<section class="page_404">
-	<div class="container">
-		<div class="row">	
-		<div class="col-sm-12 ">
-		<div class="col-sm-10 col-sm-offset-1  text-center">
-		<div class="four_zero_four_bg">
-			<h1 class="text-center ">404</h1>
-		
-		
-		</div>
-		
-		<div class="contant_box_404">
-		<h3 class="h2">
-		Look like you're lost
-		</h3>
-		
-		<p>the page you are looking for not avaible!</p>
-		
-		<a href="/" class="link_404">Go to Home</a>
-	</div>
-		</div>
-		</div>
-		</div>
-	</div>
-</section>
 </html>
-
