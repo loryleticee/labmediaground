@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    //backgroundImage: "url(https://ayrlomusic.com/" + randomPictureBackground().url + ")",
+    backgroundImage: "url(https://ayrlomusic.com/" + randomPictureBackground().url + ")",
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.main,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -133,6 +133,7 @@ export default function SignInSide() {
 
   const [values, setValues] = useState({
     email: '',
+    error: false,
   })
   /**
    * 
@@ -140,12 +141,11 @@ export default function SignInSide() {
    * @param {*} method post /get 
    * @param {*} uri  endpoint
    */
-  function emailed(value, method = 'POST', uri = process.env.REACT_APP_BACK_API_URL) {
-    console.log('toto')
+  const emailed = async (value, method = 'POST', uri = process.env.REACT_APP_BACK_API_URL) => {
     let data = {};
     data.method = method;
     data.email = value;
-    (async () => {
+    await (async () => {
       return await fetch(uri), {
         method: method,
         headers: {
@@ -153,26 +153,27 @@ export default function SignInSide() {
         },
         body: JSON.stringify(data)
       }, (res) => (
-        console.table(
-          [{ 'res': res }, { 'values': values }]
-        )
+        console.log(res)
       );
-    }).then(console.log('FINISHED'));
+    }, console.log('DONE!'))
   }
 
   const handleChange = prop => event => {
-    if(/[a-z]/.test(event.target.value) === true) setValues({ ...values, [prop]: event.target.value})
+    let error = true;
+    if (/[a-z]/.test(event.target.value) === true) {
+      error = false;
+      setValues({ ...values, [prop]: event.target.value });
+    }
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
     // console.log('values.email', values.email)
-    let sucess;
-    event.stopPropagation();
-    if (sucess = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true ? true : false) {
-      emailed(values.email)
-    }
-    if(!sucess) {
-      console.log('pas d\'envoie');
+    let sucess = false;
+    if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true) {
+      sucess += 1; emailed(values.email); setValues({ ...values, ['error']: false })
+    } else { setValues({ ...values, ['error']: true }) }
+    if (sucess) {
+      console.log('OK');
     }
   }
   return (
@@ -185,9 +186,9 @@ export default function SignInSide() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            VISITE
+            〽️
           </Typography>
-          <form className={classes.form} noValidate onSubmit={(e) => ( e.stopPropagation(), e.preventDefault())}>
+          <form className={classes.form} noValidate onSubmit={(e) => (e.stopPropagation(), e.preventDefault(), handleSubmit())}>
             <TextField
               variant="outlined"
               margin="normal"
@@ -198,11 +199,12 @@ export default function SignInSide() {
               name="email"
               autoComplete="email"
               onChange={handleChange("email")}
-              value={values.email}
-              autoFocus$
+              value={values.email ? values.email : ''}
+              autoFocus
+              error={values.error}
             />
             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
+              control={<Checkbox value="remember" color="secondary" />}
               label="Remember me"
             />
             <Button
@@ -211,7 +213,7 @@ export default function SignInSide() {
               variant="contained"
               color="primary"
               className={classes.submit}
-              
+
             >
               ACCÉDER AU CONTENU INÉDIT
             </Button>
