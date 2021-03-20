@@ -144,34 +144,35 @@ export default function SignInSide() {
     let data = {};
     data.method = method;
     data.email = value;
-    await (async () => {
-      return await fetch(uri), {
-        method: method,
-        headers: {
+    return await fetch(uri,
+      {
+        'method': method,
+        'headers': {
           'Content-Type': 'application/json;charset=utf-8'
         },
-        body: JSON.stringify(data)
-      }, (res) => (
-        console.log(res)
-      );
-    }, console.log('DONE!'))
+        'body': JSON.stringify(data)
+      }
+    ).then(res => (
+      console.log(res)))
   }
 
   const handleChange = prop => event => {
-    let error = true;
     if (/[a-z]/.test(event.target.value) === true) {
-      error = false;
       setValues({ ...values, [prop]: event.target.value });
     }
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // console.log('values.email', values.email)
-    let sucess = false;
+    let success = false;
     if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true) {
-      sucess += 1; emailed(values.email); setValues({ ...values, ['error']: false })
-    } else { setValues({ ...values, ['error']: true }) }
-    if (sucess) {
+      success += 1;
+      await emailed(values.email).then(() => {
+        setValues({ ...values, 'error': false })
+      });
+
+    } else { setValues({ ...values, 'error': true }) }
+    if (success) {
       console.log('OK');
     }
   }
@@ -213,7 +214,7 @@ export default function SignInSide() {
               color="primary"
               className={classes.submit}
             >
-              ACCÉDER AU CONTENU INÉDIT
+              ACCÉDER
             </Button>
 
             <Box mt={5}>
