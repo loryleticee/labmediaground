@@ -147,7 +147,7 @@ export default function SignInSide() {
       }
     }
     return await axios.post(uri, data, config).then(res => (
-      console.log(res)))
+      console.log(res.data)))
   }
 
   const handleChange = prop => event => {
