@@ -65,6 +65,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios';
+import { useToasts } from 'react-toast-notifications'
 
 
 function getRandomInt(max) {
@@ -126,6 +127,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide() {
   const classes = useStyles();
+  const { addToast } = useToasts();
   const [values, setValues] = useState({
     email: '',
     error: false,
@@ -141,13 +143,13 @@ export default function SignInSide() {
     data.method = method;
     data.email = value;
     let config = {
-      "Access-Control-Allow-Origin": "*",
+      //"Access-Control-Allow-Origin": "*",
       headers: {
-        "Access-Control-Allow-Origin": "*",
+        //"Access-Control-Allow-Origin": "*",
         "Content-type": "application/json; charset=UTF-8",
         'mode': 'cors'
       },
-      "Access-Control-Allow-Origin": "*"
+      //"Access-Control-Allow-Origin": "*"
       
   }
   return await axios.post(uri, data, config).then(res => (
@@ -171,7 +173,7 @@ const handleSubmit = async () => {
 
   } else { setValues({ ...values, 'error': true }) }
   if (success) {
-    console.log('OK');
+    addToast("🍁😄〽️ TipTop ! À très vite ", { appearance: 'succes' })
   }
 }
 return (
