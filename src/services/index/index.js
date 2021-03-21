@@ -140,16 +140,13 @@ export default function SignInSide() {
     let data = {};
     data.method = method;
     data.email = value;
-    return await axios(uri,
-      {
-        'method': method,
-        'headers': {
-          'mode': 'cors',
-          'Access-Control-Allow-Origin':'*',
-        },
-        'body': JSON.stringify(data)
+    config = {
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        "Access-Control-Allow-Origin": "*"
       }
-    ).then(res => (
+    }
+    return await axios.post(uri, data, config).then(res => (
       console.log(res)))
   }
 
@@ -185,7 +182,7 @@ export default function SignInSide() {
           <Typography component="h1" variant="h5">
             〽️
           </Typography>
-          <form className={classes.form} noValidate onSubmit={(e) => {e.stopPropagation(); e.preventDefault(); handleSubmit()}}>
+          <form className={classes.form} noValidate onSubmit={(e) => { e.stopPropagation(); e.preventDefault(); handleSubmit() }}>
             <TextField
               variant="outlined"
               margin="normal"
