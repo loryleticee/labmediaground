@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import './components/UI/Home/Home.scss'
 import Home from './components/UI/Home/Home'
 import * as serviceWorker from './serviceWorker'
