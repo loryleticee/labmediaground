@@ -1,5 +1,4 @@
 import React from 'react'
-import './Home.scss'
 import logo from '../../../images/logo192.png'
 
 import { Helmet } from 'react-helmet'
