@@ -143,7 +143,8 @@ export default function SignInSide() {
     let config = {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
-        "Access-Control-Allow-Origin": "*"
+        'mode': 'cors',
+        "Access-Control-Allow-Origin": "*",
       }
     }
     return await axios.post(uri, data, config).then(res => (
