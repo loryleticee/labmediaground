@@ -144,8 +144,8 @@ export default function SignInSide() {
       {
         'method': method,
         'headers': {
-          'Content-Type': 'application/json;charset=utf-8',
           'mode': 'cors',
+          'Access-Control-Allow-Origin':'*',
         },
         'body': JSON.stringify(data)
       }
