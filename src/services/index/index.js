@@ -64,6 +64,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import axios from 'axios';
 
 
 function getRandomInt(max) {
@@ -139,7 +140,7 @@ export default function SignInSide() {
     let data = {};
     data.method = method;
     data.email = value;
-    return await fetch(uri,
+    return await axios(uri,
       {
         'method': method,
         'headers': {
