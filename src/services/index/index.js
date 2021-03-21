@@ -127,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide() {
   const classes = useStyles();
-  const { addToast } = useToasts();
+  
   const [values, setValues] = useState({
     email: '',
     error: false,
@@ -165,6 +165,7 @@ const handleChange = prop => event => {
 const handleSubmit = async () => {
   // console.log('values.email', values.email)
   let success = false;
+  const { addToast } = useToasts();
   if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true) {
     success += 1;
     await emailed(values.email).then(() => {
