@@ -141,83 +141,86 @@ export default function SignInSide() {
     data.method = method;
     data.email = value;
     let config = {
+      "Access-Control-Allow-Origin": "*",
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
-        'mode': 'cors',
         "Access-Control-Allow-Origin": "*",
-      }
-    }
-    return await axios.post(uri, data, config).then(res => (
-      console.log(res.data)))
+        "Content-type": "application/json; charset=UTF-8",
+        'mode': 'cors'
+      },
+      "Access-Control-Allow-Origin": "*"
+      
   }
+  return await axios.post(uri, data, config).then(res => (
+    console.log(res.data)))
+}
 
-  const handleChange = prop => event => {
-    if (/[a-z]/.test(event.target.value) === true) {
-      setValues({ ...values, [prop]: event.target.value });
-    }
+const handleChange = prop => event => {
+  if (/[a-z]/.test(event.target.value) === true) {
+    setValues({ ...values, [prop]: event.target.value });
   }
+}
 
-  const handleSubmit = async () => {
-    // console.log('values.email', values.email)
-    let success = false;
-    if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true) {
-      success += 1;
-      await emailed(values.email).then(() => {
-        setValues({ ...values, 'error': false })
-      });
+const handleSubmit = async () => {
+  // console.log('values.email', values.email)
+  let success = false;
+  if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true) {
+    success += 1;
+    await emailed(values.email).then(() => {
+      setValues({ ...values, 'error': false })
+    });
 
-    } else { setValues({ ...values, 'error': true }) }
-    if (success) {
-      console.log('OK');
-    }
+  } else { setValues({ ...values, 'error': true }) }
+  if (success) {
+    console.log('OK');
   }
-  return (
-    <Grid container component="main" className={classes.root}>
-      <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-        <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            〽️
+}
+return (
+  <Grid container component="main" className={classes.root}>
+    <CssBaseline />
+    <Grid item xs={false} sm={4} md={7} className={classes.image} />
+    <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <div className={classes.paper}>
+        <Avatar className={classes.avatar}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          〽️
           </Typography>
-          <form className={classes.form} noValidate onSubmit={(e) => { e.stopPropagation(); e.preventDefault(); handleSubmit() }}>
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              onChange={handleChange("email")}
-              value={values.email ? values.email : ''}
-              autoFocus
-              error={values.error}
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="secondary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              ACCÉDER
+        <form className={classes.form} noValidate onSubmit={(e) => { e.stopPropagation(); e.preventDefault(); handleSubmit() }}>
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="Email Address"
+            name="email"
+            autoComplete="email"
+            onChange={handleChange("email")}
+            value={values.email ? values.email : ''}
+            autoFocus
+            error={values.error}
+          />
+          <FormControlLabel
+            control={<Checkbox value="remember" color="secondary" />}
+            label="Remember me"
+          />
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+          >
+            ACCÉDER
             </Button>
 
-            <Box mt={5}>
-              <Copyright />
-            </Box>
-          </form>
-        </div>
-      </Grid>
+          <Box mt={5}>
+            <Copyright />
+          </Box>
+        </form>
+      </div>
     </Grid>
-  );
+  </Grid>
+);
 }
