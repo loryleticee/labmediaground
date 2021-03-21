@@ -140,7 +140,7 @@ export default function SignInSide() {
     let data = {};
     data.method = method;
     data.email = value;
-    config = {
+    let config = {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
         "Access-Control-Allow-Origin": "*"
