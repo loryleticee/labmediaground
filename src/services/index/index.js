@@ -1,55 +1,3 @@
-// import React from 'react'
-// import { useDispatch, useSelector } from 'react-redux'
-// //import Social from '../social/social'
-// import Soundcloud from '../soundcloud/soundcloud'
-// import IconSoundcloud from '../soundcloud/base'
-// import IconSpotify from '../spotify/base'
-
-// import Shop from '../shop/shop'
-// import Spotify from '../spotify/spotify'
-
-// const Index = () => {
-//   const dispatch = useDispatch()
-
-//   const isSoundcloud = useSelector((state) => state.home.soundcloud)
-//   const isSpotify = useSelector((state) => state.home.spotify)
-
-//   const soundcloud = !isSoundcloud ?  <IconSoundcloud /> : <Soundcloud />
-//   const spotify = !isSpotify ?  <IconSpotify /> : <Spotify /> 
-
-//   const handleClickSoundcloud = () => {
-//     if(!isSoundcloud)
-//       dispatch({ type: 'ACTIVESOUNDCLOUD'}) 
-//   }
-
-//   const handleClickSpotify = () => {
-//     if(!isSpotify)
-//       dispatch({ type: 'ACTIVESPOTIFY'}) 
-//   }
-
-//   return (
-//     <>
-//       <div className='page-group'>
-//         <div className='social-group' />
-//         <div className='youtube-canvas'>
-//             <>
-//               <span onClick={handleClickSoundcloud}>{soundcloud}</span>
-//             </>
-//             <Shop />
-//             <>
-//               <span onClick={handleClickSpotify}>{spotify}</span>
-//             </>
-//             <>
-//               <span onClick={handleClickSpotify}>{spotify}</span>
-//             </>
-//         </div>
-//       </div>
-//     </>
-//   )
-// }
-
-// export default Index
-
 import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -77,7 +25,7 @@ function randomPictureBackground() {
     { 'url': '3000x3000-833536--4C41CA74-062E-4BB6-864D042CFC8D686F--1610075332921--Malika.jpg', 'src': "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/924382822&color=%23949494&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
   ]
 
-  return array[getRandomInt(array.length - 1)]
+  return array[getRandomInt(array.length)]
 }
 
 function Copyright() {
@@ -151,8 +99,8 @@ export default function SignInSide() {
       },
 
     }
-    return await axios.post(uri, data, config).then(res => (
-      console.log(res.data)))
+
+    return await axios.post(uri, data, config).then(res => ( console.log(res.data) ))
   }
 
   const handleChange = prop => event => {
