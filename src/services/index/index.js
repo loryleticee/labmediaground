@@ -23,6 +23,10 @@ function randomPictureBackground() {
   const array = [
     { 'url': '3000x3000-833536--2B2FDBC5-6578-4B26-90B49466F8FA9618--1615598846428--AYRLOMUSICAyrloRedCastle.jpg', 'src': "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/846989611&color=%23bf3232&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
     { 'url': '3000x3000-833536--4C41CA74-062E-4BB6-864D042CFC8D686F--1610075332921--Malika.jpg', 'src': "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/924382822&color=%23949494&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
+    { 'url': '833536--F8422073-66AF-4DFC-90C21270673A652D--1558274731020--wynalayrlococonut.jpg', 'src': "" },
+    { 'url': '3000x3000-833536--6111A5A0-D3E7-478A-8DE1D59A6E7BE74B--1577637422153--LoryLETICEEINTENSITYAyrlo.jpg', 'src': "" },
+    { 'url': '833536--B93DF3A8-C88E-435C-9BA96D7284A4DFA3--1572712047436--AyrloSundayAfternoon.jpg', 'src': "" },
+    { 'url': '3000x3000-833536--C198689A-856F-4BDA-A298F896314D473F--1604247700252--AyrlomusicFUEGO.jpg', 'src': "" },
   ]
 
   return array[getRandomInt(array.length)]
@@ -100,7 +104,7 @@ export default function SignInSide() {
 
     }
 
-    return await axios.post(uri, data, config).then(res => ( console.log(res.data) ))
+    return await axios.post(uri, data, config).then(res => (console.log(res.data)))
   }
 
   const handleChange = prop => event => {
