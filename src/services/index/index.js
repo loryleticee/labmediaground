@@ -127,7 +127,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide() {
   const classes = useStyles();
-  
+  const { addToast } = useToasts();
+
   const [values, setValues] = useState({
     email: '',
     error: false,
@@ -145,85 +146,84 @@ export default function SignInSide() {
     let config = {
       //"Access-Control-Allow-Origin": "*",
       headers: {
-        //"Access-Control-Allow-Origin": "*",
         "Content-type": "application/json; charset=UTF-8",
         'mode': 'cors'
       },
-      //"Access-Control-Allow-Origin": "*"
-      
-  }
-  return await axios.post(uri, data, config).then(res => (
-    console.log(res.data)))
-}
 
-const handleChange = prop => event => {
-  if (/[a-z]/.test(event.target.value) === true) {
-    setValues({ ...values, [prop]: event.target.value });
+    }
+    return await axios.post(uri, data, config).then(res => (
+      console.log(res.data)))
   }
-}
 
-const handleSubmit = async () => {
-  // console.log('values.email', values.email)
-  let success = false;
-  const { addToast } = useToasts();
-  if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true) {
-    success += 1;
-    await emailed(values.email).then(() => {
-      setValues({ ...values, 'error': false })
-    });
-
-  } else { setValues({ ...values, 'error': true }) }
-  if (success) {
-    addToast("🍁😄〽️ TipTop ! À très vite ", { appearance: 'succes' })
+  const handleChange = prop => event => {
+    if (/[a-z]/.test(event.target.value) === true) {
+      setValues({ ...values, [prop]: event.target.value });
+    }
   }
-}
-return (
-  <Grid container component="main" className={classes.root}>
-    <CssBaseline />
-    <Grid item xs={false} sm={4} md={7} className={classes.image} />
-    <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          〽️
+
+  const handleSubmit = async () => {
+    let success = false;
+
+    if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true) {
+      success += 1;
+      await emailed(values.email).then(() => {
+        setValues({ ...values, 'error': false })
+      });
+
+    } else { setValues({ ...values, 'error': true }) }
+
+    if (success) {
+      addToast("🍁😄〽️ TipTop ! À très vite ", { appearance: 'success' })
+    }
+  }
+
+  return (
+    <Grid container component="main" className={classes.root}>
+      <CssBaseline />
+      <Grid item xs={false} sm={4} md={7} className={classes.image} />
+      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <div className={classes.paper}>
+          <Avatar className={classes.avatar}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            〽️
           </Typography>
-        <form className={classes.form} noValidate onSubmit={(e) => { e.stopPropagation(); e.preventDefault(); handleSubmit() }}>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-            onChange={handleChange("email")}
-            value={values.email ? values.email : ''}
-            autoFocus
-            error={values.error}
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="secondary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            ACCÉDER
+          <form className={classes.form} noValidate onSubmit={(e) => { e.stopPropagation(); e.preventDefault(); handleSubmit() }}>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              onChange={handleChange("email")}
+              value={values.email ? values.email : ''}
+              autoFocus
+              error={values.error}
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="secondary" />}
+              label="Remember me"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              ACCÉDER
             </Button>
 
-          <Box mt={5}>
-            <Copyright />
-          </Box>
-        </form>
-      </div>
+            <Box mt={5}>
+              <Copyright />
+            </Box>
+          </form>
+        </div>
+      </Grid>
     </Grid>
-  </Grid>
-);
+  );
 }

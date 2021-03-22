@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Home from './components/UI/Home/Home'
 import * as serviceWorker from './serviceWorker'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { ToastProvider } from 'react-toast-notifications'
 
 import {
   BrowserRouter as Router,
@@ -11,6 +12,7 @@ import {
 } from 'react-router-dom'
 
 ReactDOM.render(
+  <ToastProvider autoDismiss autoDismissTimeout={'3000'}>
     <Router>
       <div className='page-full'>
         <Switch>
@@ -18,7 +20,7 @@ ReactDOM.render(
         </Switch>
       </div>
     </Router>
-
+  </ToastProvider>
   , document.getElementById('root')
 )
 
