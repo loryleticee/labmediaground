@@ -122,7 +122,7 @@ export default function SignInSide() {
     data.email = value;
 
 
-    return await axios.post(uri, data, config).then(res => ( setValues({ ...values, msg: res.data }) ))
+    return await axios.post(uri, data, config).then(res => ( res.data ))
   }
 
   const handleChange = prop => event => {
