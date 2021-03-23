@@ -15,6 +15,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios';
 import { useToasts } from 'react-toast-notifications'
 
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+let token = process.env.REACT_APP_PRINTFULL_API_TOKEN;
+axios.defaults.headers.Authorization = 'Basic ' + token;
+
+const config = {
+  headers: {
+    'mode': 'cors',
+    "Content-type": "application/json; charset=UTF-8",
+  },
+}
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -45,6 +55,19 @@ function Copyright() {
   );
 }
 
+const Printfull = () => {
+  let url = process.env.REACT_APP_PRINTFULL_API_URL;
+  let token = process.env.REACT_APP_PRINTFULL_API_TOKEN;
+
+  return axios.get(url, { 'api-key': token }, config).then((res) => {
+    console.log(res.data);
+    // <Typography variant="body2" color="textSecondary" align="center">
+    //   {/* <img src></img> */}
+    // </Typography>
+  })
+}
+
+//Printfull()
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -84,6 +107,7 @@ export default function SignInSide() {
   const [values, setValues] = useState({
     email: '',
     error: false,
+    msg: '',
   });
   /**
    * 
@@ -95,16 +119,9 @@ export default function SignInSide() {
     let data = {};
     data.method = method;
     data.email = value;
-    let config = {
-      //"Access-Control-Allow-Origin": "*",
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-        'mode': 'cors'
-      },
 
-    }
 
-    return await axios.post(uri, data, config).then(res => (console.log(res.data)))
+    return await axios.post(uri, data, config).then(res => ( setValues({ ...values, msg: res.data }) ))
   }
 
   const handleChange = prop => event => {
@@ -125,7 +142,8 @@ export default function SignInSide() {
     } else { setValues({ ...values, 'error': true }) }
 
     if (success) {
-      addToast("🍁😄〽️ TipTop ! À très vite ", { appearance: 'success' })
+      addToast(values.msg, { appearance: 'success' })
+      // addToast("🍁😄〽️ TipTop ! À très vite ", { appearance: 'success' })
     }
   }
 
@@ -172,6 +190,7 @@ export default function SignInSide() {
 
             <Box mt={5}>
               <Copyright />
+
             </Box>
           </form>
         </div>
