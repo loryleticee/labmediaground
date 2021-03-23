@@ -16,14 +16,15 @@ import axios from 'axios';
 import { useToasts } from 'react-toast-notifications'
 
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-let token = process.env.REACT_APP_PRINTFULL_API_TOKEN;
-axios.defaults.headers.Authorization = 'Basic ' + token;
+// let token = process.env.REACT_APP_PRINTFULL_API_TOKEN;
+// axios.defaults.headers.Authorization = 'Basic ' + token;
 
 const config = {
   headers: {
     'mode': 'cors',
     "Content-type": "application/json; charset=UTF-8",
   },
+  'Access-Control-Allow-Origin' : '*',
 }
 
 function getRandomInt(max) {
