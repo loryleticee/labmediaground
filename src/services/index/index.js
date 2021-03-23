@@ -133,18 +133,18 @@ export default function SignInSide() {
 
   const handleSubmit = async () => {
     let success = false;
-
+    let msg = 'no api call'
     if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email) === true) {
       success += 1;
-      await emailed(values.email).then(() => {
+      await emailed(values.email).then((res) => {
+        msg = res;
         setValues({ ...values, 'error': false })
       });
 
     } else { setValues({ ...values, 'error': true }) }
 
     if (success) {
-      addToast(values.msg, { appearance: 'success' })
-      // addToast("🍁😄〽️ TipTop ! À très vite ", { appearance: 'success' })
+      addToast(msg, { appearance: 'info' })
     }
   }
 
