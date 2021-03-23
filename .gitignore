@@ -4,6 +4,7 @@ build
 manifest.json
 mailing.txt
 emailed.py
+check.py
 static
 precache-manifest.*.js
 #logo192.png
